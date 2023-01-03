@@ -18,12 +18,21 @@
 			<th></th>
 			<th>作品名 / 作者名</th>
 		</tr>
-		<tr>
-			<td><img src="" alt="" /></td>
-			<td>
-				<a href="" target="_blank">作品名 / 作者名</a>
-			</td>
-		</tr>
+		<% list.each do |row| %>
+			<tr>
+				<% if !row[2].nil? %>
+					<td><img src="<%= row[3] %>" alt="" width="150" style="height:auto;" /></td>
+					<td>
+						<a href="<%= row[2] %>" target="_blank"><%= row[0] %> / <%= row[1] %></a>
+					</td>
+				<% else %>
+					<td style="height:120px;"></td>
+					<td>
+							<%= row[0] %> / <%= row[1] %>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>
 	</table>
 </main>
 
