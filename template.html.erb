@@ -13,7 +13,12 @@
 <body>
   
 <main>
-	<table class="table">
+  <h2>抜粋作品リスト</h2>
+
+  <p>現在閲覧可能な2021年の作品から、投票されそうなものを抜粋してみました</p>
+  <p>ほとんどはニコニコ動画上<a href="https://www.nicovideo.jp/tag/%E9%9D%99%E6%AD%A2%E7%94%BBMAD%20-%E8%8A%B8%E4%BA%BAMAD?sort=f&order=d&start=2022-01-01&end=2023-01-01" target="_blank">タグ検索</a>から、閲覧可能そうな数という事で150作品以下に絞り込んでみました</p>
+
+	<table>
 		<tr>
 			<th></th>
 			<th>作品名 / 作者名</th>
@@ -26,9 +31,9 @@
 						<a href="<%= row[2] %>" target="_blank"><%= row[0] %> / <%= row[1] %></a>
 					</td>
 				<% else %>
-					<td style="height:120px;"></td>
+					<td><img src="img/thumbnail.png" alt="" width="150" style="height:auto;" /></td>
 					<td>
-							<%= row[0] %> / <%= row[1] %>
+						<%= row[0] %> / <%= row[1] %>
 					</td>
 				<% end %>
 			</tr>
