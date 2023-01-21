@@ -26,12 +26,12 @@
 		<% list.each do |row| %>
 			<tr>
 				<% if !row[2].nil? %>
-					<td><img src="<%= row[3] %>" alt="" width="150" style="height:auto;" /></td>
+					<td><img src="<%= row[3] %>" alt="" width="120" style="height:auto;" /></td>
 					<td>
 						<a href="<%= row[2] %>" target="_blank"><%= row[0] %> / <%= row[1] %></a>
 					</td>
 				<% else %>
-					<td><img src="img/thumbnail.png" alt="" width="150" style="height:auto;" /></td>
+					<td><img src="img/thumbnail.png" alt="" width="120" style="height:auto;" /></td>
 					<td>
 						<%= row[0] %> / <%= row[1] %>
 					</td>
