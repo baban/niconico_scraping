@@ -71,7 +71,7 @@ def write_csv(urls):
 offset = 0
 urls = []
 while True:
-  results = nico(f"2022-01-01T00:00:00+09:00", f"2022-12-31T23:59:59+09:00", offset * 100)
+  results = nico(f"2023-01-01T00:00:00+09:00", f"2023-12-31T23:59:59+09:00", offset * 100)
   urls.extend(results)
   offset += 1
   if len(results) == 0:
